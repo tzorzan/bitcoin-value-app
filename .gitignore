@@ -73,9 +73,14 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# Yarn Lock file
+yarn.lock
+
 # dotenv environment variables file
 .env
 
+# SAM packaged template
+packaged.yaml
 
 ### OSX ###
 *.DS_Store

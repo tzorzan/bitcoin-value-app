@@ -26,9 +26,9 @@ Resources:
 
 Outputs:
 
-    BitcoinValuedApi:
+    BitcoinValueApi:
       Description: "API Gateway endpoint URL for Prod stage for Bitcoin Value function"
-      Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/value/"
+      Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/value"
 
     BitcoinValueFunction:
       Description: "Bitcoin Value Lambda Function ARN"

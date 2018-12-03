@@ -17,8 +17,8 @@ exports.lambdaHandler = async (event, context) => {
             'body': JSON.stringify({
                 uid: uuidv4(),
                 updateDate: now.toISOString(),
-                titleText: price,
-                mainText: 'Il valore Bitcoin di oggi '+ moment(now).format('dddd D MMMM Y') + ' è: ' + price,
+                titleText: '1 Bitcoin = ' + price + '€',
+                mainText: 'Oggi, '+ moment(now).format('dddd D MMMM Y') + ', un Bitcoin vale: ' + price + ' euro.',
                 redirectionUrl: 'https://www.coinbase.com/charts'
             })
         }
