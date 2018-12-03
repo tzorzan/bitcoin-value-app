@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Retrieve Bitcoin value.",
   "main": "src/index.js",
-  "repository": "https://github.com",
+  "repository": "https://github.com/tzorzan/bitcoin-value-app.git",
   "author": "Tobia Zorzan",
   "license": "MIT",
   "dependencies": {
