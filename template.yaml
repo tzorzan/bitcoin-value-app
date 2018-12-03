@@ -1,0 +1,39 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+    bitcoin-value
+
+    SAM template for bitcoin-value app.
+    
+Globals:
+    Function:
+        Timeout: 5
+
+
+Resources:
+    BitcoinValueFunction:
+        Type: AWS::Serverless::Function
+        Properties:
+            CodeUri: bitcoin_value/
+            Handler: app.lambdaHandler
+            Runtime: nodejs8.10
+            Events:
+                GetValue:
+                    Type: Api
+                    Properties:
+                        Path: /value
+                        Method: get
+
+Outputs:
+
+    BitcoinValuedApi:
+      Description: "API Gateway endpoint URL for Prod stage for Bitcoin Value function"
+      Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/value/"
+
+    BitcoinValueFunction:
+      Description: "Bitcoin Value Lambda Function ARN"
+      Value: !GetAtt BitcoinValueFunction.Arn
+
+    BitcoinValueFunctionIamRole:
+      Description: "Implicit IAM Role created for Hello World function"
+      Value: !GetAtt BitcoinValueFunctionRole.Arn

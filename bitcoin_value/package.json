@@ -1,0 +1,21 @@
+{
+  "name": "bitcoin_value",
+  "version": "1.0.0",
+  "description": "Retrieve Bitcoin value.",
+  "main": "src/index.js",
+  "repository": "https://github.com",
+  "author": "Tobia Zorzan",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "moment": "^2.22.2",
+    "uuid": "^3.3.2"
+  },
+  "scripts": {
+    "test": "mocha tests/unit/"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
+  }
+}
